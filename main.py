@@ -1,4 +1,4 @@
-"""Forecast-driven allocation model (v4).
+"""Allocation Model V4 :)
 
 Input tables (passed as DataFrames in `inputs` dict):
     DemandStatement  : (Customer ID, Product, Forecast, Gross Profit MT)
@@ -11,32 +11,16 @@ Parameters:
     w_seg : weight on segment term       (default 0.5)
 
 Joining rules:
-    - DemandStatement.Customer ID must exist in Customer table → else DROP row + warn
-    - DemandStatement.Product   must exist in Product table   → else supply treated as 0
-      (so the LP allocates 0 across all rows for that product)
+    - DemandStatement.Customer ID must exist in Customer table -> else DROP row + warn
+    - DemandStatement.Product must exist in Product table -> else supply treated as 0
     - Segmentation weights are rescaled so PARTNER = 1.0 (others scale relative)
     - Default segment weights if table not provided:
-        PARTNER=100, DISTRIBUTOR=75, STRATEGIC=60, STANDARD=45,
-        LIGHT TOUCH=25, UNASSIGNED=10
-
-Objective (maximize):
-
-    sum over rows (i,k):
-        w_gp  * (Allocated_ik * GP_per_MT_i) / GP_max_possible
-      + w_seg * (Allocated_ik * SegWeight_i) / Seg_max_possible
-
-    where:
-        GP_max_possible  = sum_ik (Forecast_ik * GP_per_MT_i)
-        Seg_max_possible = sum_ik (Forecast_ik * SegWeight_i)
-
-    Both terms read as "fraction of theoretical max captured." With w_gp=1
-    the objective IS the GP capture rate (a number in [0,1]). Same logic
-    for w_seg=1 and the segment-weighted volume capture rate. Mixed weights
-    blend the two capture rates linearly.
-
-Constraints:
-    sum_i Allocated_ik <= Supply_k         for each product k
-    0 <= Allocated_ik <= Forecast_ik       per row
+        PARTNER=100,
+        DISTRIBUTOR=75, 
+        STRATEGIC=60, 
+        STANDARD=45,
+        LIGHT TOUCH=25, 
+        UNASSIGNED=10
 """
 
 from typing import Dict, Any
@@ -267,8 +251,6 @@ def run(
         "model_summary":       model_summary,
     }
 
-
-# ----------------------------------------------------------------------
 if __name__ == "__main__":
     inputs = {
         "DemandStatement": pd.read_csv("demand_statement.csv"),

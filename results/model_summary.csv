@@ -1,0 +1,2 @@
+N_Demand_Rows,N_Customers,N_Products,Total_Supply,Total_Forecast,Total_Allocated,Total_GP_Allocated,Total_GP_at_Forecast,GP_Capture_Rate,Segment_Capture_Rate,Objective_Score,w_gp,w_seg,Solver_Status
+30,12,4,10076.5,13435.5,10076.5,1197051.29,1518718.85,0.7882,0.8685,0.828346,0.5,0.5,Optimization terminated successfully. (HiGHS Status 7: Optimal)

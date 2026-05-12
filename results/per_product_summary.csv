@@ -1,0 +1,5 @@
+Product,Product Name,Supply,Total_Forecast,Total_Allocated,Supply_Util_Pct,Total_GP_Allocated
+P_A,Starch Type A,2740.6,3654.2,2740.6,100.0,321365.84
+P_B,Sweetener B,2227.6,2970.2,2227.6,100.0,248748.83
+P_C,Modified Starch C,2679.1,3572.2,2679.1,100.0,289538.55
+P_D,Specialty Blend D,2429.2,3238.9,2429.2000000000003,100.0,337398.07
