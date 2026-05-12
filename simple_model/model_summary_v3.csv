@@ -1,0 +1,2 @@
+N_Rows,N_Companies,N_Products,Total_Supply,Total_Contract,Total_Forecast,Total_Allocated,Total_GP_Allocated,Total_GP_at_Forecast,GP_Capture_Pct,Objective_Score,w_gp,w_imp,Solver_Status
+27,10,4,8014,11080,10685,8014.0,873982.0,1145628.0,76.29,0.612129,0.5,0.5,Optimization terminated successfully. (HiGHS Status 7: Optimal)

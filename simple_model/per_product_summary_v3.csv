@@ -1,0 +1,5 @@
+Product,Supply_MT,Total_Forecast_MT,Total_Allocated_MT,Supply_Util_Pct,Total_GP_Allocated
+P_A,1634,2178,1634.0,100.0,172841.0
+P_B,2718,3624,2718.0,100.0,285422.0
+P_C,1936,2582,1936.0,100.0,222745.0
+P_D,1726,2301,1726.0,100.0,192974.0
