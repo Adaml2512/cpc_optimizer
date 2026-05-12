@@ -1,2 +1,0 @@
-Total_Supply,Total_Demand,Total_Filled_Before,Total_Remaining,Total_Allocated,Supply_Utilisation_Pct,Total_GP_Allocated,Total_GP_Max_Possible,GP_Capture_Pct,Objective_Score,w_gp,w_imp,w_str,w_alt,Solver_Status
-7927,18794,7469,11325,7927.0,100.0,909349.0,2095108.0,43.4,0.540071,0.4,0.3,0.2,0.1,Optimization terminated successfully. (HiGHS Status 7: Optimal)
